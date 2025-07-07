@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "truedge-studio/package.json",
+      "use": "@vercel/static-build",
+      "config": { "distDir": "truedge-studio/build" }
+    }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "truedge-studio/index.html" }
+  ]
+}
+"buildCommand": "cd truedge-studio && npm install && npm run build",
